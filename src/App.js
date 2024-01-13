@@ -214,9 +214,11 @@ function App() {
           {isOk && <p className="fetch_ok">{getText('thank', isUa)}</p>}
           {isError && <p className="fetch_error">{getText('error', isUa)}</p>}
 
-          <button className="submit_btn" type="submit">
-            {isFetch ? '...' : getText('sub', isUa)}
-          </button>
+          {!isOk && (
+            <button className="submit_btn" type="submit">
+              {isFetch ? '...' : getText('sub', isUa)}
+            </button>
+          )}
         </form>
       </section>
     </>
