@@ -77,6 +77,14 @@ const text = {
     en: 'Would you prefer to select the photo for editing yourself, or would you like the photographer to make the choice?',
     ua: 'Чи хотіли б ви самі обрати фото для обробки чи надаєте перевагу вибору фотографом?',
   },
+  q10a: {
+    en: 'Me',
+    ua: 'Я',
+  },
+  q10b: {
+    en: 'Photographer',
+    ua: 'Фотограф',
+  },
   q11: {
     en: 'How do you typically feel during a photo shoot? Do you require any psychological support?',
     ua: 'Як ви зазвичай почуваєтесь на фотозйомці? Чи потрібна вам психологічна підтримка?',
@@ -104,5 +112,13 @@ const text = {
   error: {
     en: 'Error! Pleace try again',
     ua: 'Помилка. Будь ласка спробуйте ще раз',
+  },
+  yes: {
+    en: 'Yes',
+    ua: 'Так',
+  },
+  no: {
+    en: 'No',
+    ua: 'Ні',
   },
 };

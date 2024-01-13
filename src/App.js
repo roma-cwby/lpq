@@ -8,8 +8,13 @@ import { Checkboxes } from './components/Checkboxes/Checkboxes';
 const url = `https://api.telegram.org/bot${process.env.REACT_APP_TOKEN}/sendMessage?chat_id=${process.env.REACT_APP_ID}&text=`;
 
 function App() {
-  const firstUlRef = useRef();
-  const secondUlRef = useRef();
+  const ulRef3 = useRef();
+  const ulRef4 = useRef();
+  const ulRef8 = useRef();
+  const ulRef10 = useRef();
+  const ulRef11 = useRef();
+  const ulRef12 = useRef();
+  const ulRef14 = useRef();
 
   const [isUa, setIsUa] = useState(false);
   const [isFetch, setIsFetch] = useState(false);
@@ -41,28 +46,22 @@ function App() {
     const msg = `${box.q1.children[0].textContent} %0A ${box.q1.children[1].value} %0A %0A ${
       box.q2.children[0].textContent
     } %0A ${box.q2.children[1].value}
-     %0A %0A ${box.q3.children[0].textContent} %0A ${getCheckboxesValues(firstUlRef)} %0A %0A ${
+     %0A %0A ${box.q3.children[0].textContent} %0A ${getCheckboxesValues(ulRef3)} %0A %0A ${
       box.q4.children[0].textContent
-    } %0A ${getCheckboxesValues(secondUlRef)}
+    } %0A ${getCheckboxesValues(ulRef4)}
      %0A %0A ${box.q5.children[0].textContent} %0A ${box.q5.children[1].value} %0A %0A ${
       box.q6.children[0].textContent
     } %0A ${box.q6.children[1].value}
      %0A %0A ${box.q7.children[0].textContent} %0A ${box.q7.children[1].value} 
-     %0A %0A ${box.q8.children[0].textContent} %0A ${Boolean(
-      box.q8.children[1].classList.contains('check')
-    )} 
+     %0A %0A ${box.q8.children[0].textContent} %0A ${getCheckboxesValues(ulRef8)} 
      %0A %0A ${box.q9.children[0].textContent} %0A ${box.q9.children[1].value} 
-     %0A %0A ${box.q10.children[0].textContent} %0A ${Boolean(
-      box.q10.children[1].classList.contains('check')
-    )} %0A %0A ${box.q11.children[0].textContent} %0A ${Boolean(
-      box.q11.children[1].classList.contains('check')
-    )} %0A %0A ${box.q12.children[0].textContent} %0A ${Boolean(
-      box.q12.children[1].classList.contains('check')
-    )} %0A %0A ${box.q13.children[0].textContent} %0A ${Boolean(
-      box.q13.children[1].classList.contains('check')
-    )} %0A %0A ${box.q14.children[0].textContent} %0A ${Boolean(
-      box.q14.children[1].classList.contains('check')
-    )}`;
+     %0A %0A ${box.q10.children[0].textContent} %0A ${getCheckboxesValues(ulRef10)} %0A %0A ${
+      box.q11.children[0].textContent
+    } %0A ${getCheckboxesValues(ulRef11)} %0A %0A ${
+      box.q12.children[0].textContent
+    } %0A ${getCheckboxesValues(ulRef12)} %0A %0A ${box.q13.children[0].textContent} %0A ${
+      box.q13.children[1].value
+    } %0A %0A ${box.q14.children[0].textContent} %0A ${getCheckboxesValues(ulRef14)}`;
 
     try {
       setIsFetch(true);
@@ -114,7 +113,7 @@ function App() {
                 getText('q3c', isUa),
                 getText('q3d', isUa),
               ]}
-              ulRef={firstUlRef}
+              ulRef={ulRef3}
             />
           </div>
 
@@ -127,7 +126,7 @@ function App() {
                 getText('q4c', isUa),
                 getText('q4d', isUa),
               ]}
-              ulRef={secondUlRef}
+              ulRef={ulRef4}
             />
           </div>
 
@@ -148,12 +147,7 @@ function App() {
 
           <div id="q8" className="input__wrap">
             <label>{getText('q8', isUa)}</label>
-            <div
-              className="input__checkbox"
-              onClick={e => e.currentTarget.classList.toggle('check')}
-            >
-              <FaCheck />
-            </div>
+            <Checkboxes text={[getText('yes', isUa), getText('no', isUa)]} ulRef={ulRef8} />
           </div>
 
           <div id="q9" className="input__wrap">
@@ -163,61 +157,38 @@ function App() {
 
           <div id="q10" className="input__wrap">
             <label>{getText('q10', isUa)}</label>
-            <div
-              className="input__checkbox"
-              onClick={e => e.currentTarget.classList.toggle('check')}
-            >
-              <FaCheck />
-            </div>
+            <Checkboxes text={[getText('q10a', isUa), getText('q10b', isUa)]} ulRef={ulRef10} />
           </div>
 
           <div id="q11" className="input__wrap">
             <label>{getText('q11', isUa)}</label>
-            <div
-              className="input__checkbox"
-              onClick={e => e.currentTarget.classList.toggle('check')}
-            >
-              <FaCheck />
-            </div>
+            <Checkboxes text={[getText('yes', isUa), getText('no', isUa)]} ulRef={ulRef11} />
           </div>
 
           <div id="q12" className="input__wrap">
             <label>{getText('q12', isUa)}</label>
-            <div
-              className="input__checkbox"
-              onClick={e => e.currentTarget.classList.toggle('check')}
-            >
-              <FaCheck />
-            </div>
+            <Checkboxes text={[getText('yes', isUa), getText('no', isUa)]} ulRef={ulRef12} />
           </div>
 
           <div id="q13" className="input__wrap">
             <label>{getText('q13', isUa)}</label>
-            <div
-              className="input__checkbox"
-              onClick={e => e.currentTarget.classList.toggle('check')}
-            >
-              <FaCheck />
-            </div>
+            <input className="input__text" type="text" />
           </div>
 
           <div id="q14" className="input__wrap">
             <label>{getText('q14', isUa)}</label>
-            <div
-              className="input__checkbox"
-              onClick={e => e.currentTarget.classList.toggle('check')}
-            >
-              <FaCheck />
-            </div>
+            <Checkboxes text={[getText('yes', isUa), getText('no', isUa)]} ulRef={ulRef14} />
           </div>
 
           {isOk && <p className="fetch_ok">{getText('thank', isUa)}</p>}
           {isError && <p className="fetch_error">{getText('error', isUa)}</p>}
 
-          {!isOk && (
+          {!isOk ? (
             <button className="submit_btn" type="submit">
               {isFetch ? '...' : getText('sub', isUa)}
             </button>
+          ) : (
+            <FaCheck className="completed" />
           )}
         </form>
       </section>
