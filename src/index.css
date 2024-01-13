@@ -10,7 +10,8 @@
 body {
   min-height: 100vh;
 
-  background-image: url('./img/bg.jpg');
+  background-image: linear-gradient(to right,rgba(185, 31, 57, 0.6), rgba(68, 0, 255, 0.6)), url('./img/bg.jpg');
+  /* background-image: url('./img/bg.jpg'); */
   background-position: center 10%;
   background-size: cover;
   background-attachment: fixed;
@@ -76,4 +77,190 @@ section {
   padding: 20px 10px;
 
   background-color: transparent;
+}
+
+form {
+  text-align: center;
+}
+
+.input__wrap {
+  padding: 40px 0;
+}
+
+label {
+  font-size: 20px;
+}
+
+input {
+  display: flex;
+  margin: 0 auto;
+  margin-top: 30px;
+
+}
+
+.input__text {
+  resize: none;
+  background-color: transparent;
+
+  color: white;
+  font-size: 20px;
+
+
+  transition: color 300ms linear;
+
+  border: none;
+  border-bottom: 1px solid white;
+}
+
+.input__text:hover,
+.input__text:focus {
+  outline: none;
+  border-color: green;
+}
+
+.input__date {
+  background-color: transparent;
+  padding: 10px 10px;
+  border-radius: 10px;
+  border: 1px solid white;
+  color: white;
+
+
+}
+
+.input__date:hover,
+.input__date:focus {
+  outline: none;
+  cursor: pointer;
+}
+
+.input__number {
+  resize: none;
+  background-color: transparent;
+
+  color: white;
+  font-size: 20px;
+
+  width: 80px;
+
+
+  transition: color 300ms linear;
+
+  border: none;
+  border-bottom: 1px solid white;
+
+  -moz-appearance: textfield;
+  -webkit-appearance: none;
+}
+
+.input__number:hover,
+.input__number:focus {
+  outline: none;
+  border-color: green;
+}
+
+.input__textarea {
+  display: flex;
+
+  padding: 0 10px;
+
+  margin: 0 auto;
+
+  max-width: 100%;
+  width: 500px;
+  height: 100px;
+
+  color: white;
+
+  resize: none;
+  margin-top: 30px;
+
+  overflow: hidden;
+
+  background-color: transparent;
+  border: 1px solid white;
+  border-top: none;
+  border-radius: 20px;
+}
+
+.input__textarea:hover,
+.input__textarea:focus {
+  outline: none;
+
+}
+
+
+.input__checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+
+  
+  margin: 0 auto;
+  
+  margin-top: 30px;
+
+  background-color: transparent;
+  border-radius: 50%;
+  border: 1px solid white;
+
+  transition: all 300ms linear;
+}
+
+.input__checkbox.check {
+  border-color: green;
+}
+
+.input__checkbox.check svg{
+  fill: green;
+}
+
+.input__checkbox svg {
+  fill: transparent;
+  transition: fill 300ms linear;
+}
+
+.input__checkbox:hover,
+.input__checkbox:focus {
+  border-color: green;
+  cursor: pointer;
+}
+
+
+
+.submit_btn {
+  padding: 10px;
+
+  margin-top: 30px;
+
+  border-radius: 10px;
+  border: 1px solid white;
+  transition: color 300ms linear;
+
+  background-color: transparent;
+  color: white;
+}
+
+.submit_btn:hover{
+  cursor: pointer;
+  color: green;
+  border-color: green;
+}
+
+.fetch_ok,
+.fetch_error {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.fetch_ok {
+  color: white;
+}
+
+.fetch_error {
+  color: red;
 }

@@ -13,9 +13,45 @@ const text = {
     en: 'What type of photo shoot are you interested in?',
     ua: 'Яка зйомка вас цікавить?',
   },
+  q3a: {
+    en: 'Individual portrait',
+    ua: 'Індивідуальна портретна',
+  },
+  q3b: {
+    en: 'Love story',
+    ua: 'Парна',
+  },
+  q3c: {
+    en: 'Family',
+    ua: 'Сімейна',
+  },
+  q3d: {
+    en: 'Wedding',
+    ua: 'Весільна',
+  },
+  q3e: {
+    en: 'Something else (write another answer here)',
+    ua: 'Інше (напишіть тут вашу відповідь)',
+  },
   q4: {
     en: 'For how many hours are you looking to book the photo shoot?',
     ua: 'На скільки годин ви б хотіли замовити зйомку?',
+  },
+  q4a: {
+    en: '1',
+    ua: '1',
+  },
+  q4b: {
+    en: '2',
+    ua: '2',
+  },
+  q4c: {
+    en: '3-4',
+    ua: '3-4',
+  },
+  q4d: {
+    en: 'More',
+    ua: 'Більше',
   },
   q5: {
     en: 'How many individuals are expected to attend the photo shoot?',
@@ -60,5 +96,13 @@ const text = {
   thank: {
     en: `Thanks for your responses! I'll review the information and get back to you promptly!`,
     ua: 'Дякуємо за ваші відповіді! Я перегляну інформацію та негайно зв’яжуся з вами!',
+  },
+  sub: {
+    en: 'Submit',
+    ua: 'Надіслати',
+  },
+  error: {
+    en: 'Error! Pleace try again',
+    ua: 'Помилка. Будь ласка спробуйте ще раз',
   },
 };
